@@ -23,9 +23,10 @@ public class Program {
 		File file;
 			String path;
 		
-			document = Arrays.asList("Alex Blue,15", "Maria Green,22", "Bob Brown,21",
+		document = Arrays.asList("Alex Blue,15", "Maria Green,22", "Bob Brown,21",
 					"Alex Blue,30", "Bob Brown,15", "Maria Green,27", "Maria Green,22",
 					"Bob Brown,25", "Alex Blue,31");
+		System.out.printf("Enter file full path: ");
 		path = sc.next();
 		file = new File(path);
 		try {
@@ -56,7 +57,7 @@ public class Program {
 				}
 			}
 			for (String c: candidates.keySet())
-				System.out.printf("%s,%d%n", c, candidates.get(c));
+				System.out.printf("%s: %d%n", c, candidates.get(c));
 		}
 		catch (FileNotFoundException e) {
 			e.printStackTrace();
